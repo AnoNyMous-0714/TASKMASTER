@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/createaccount.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>PSBA MANAGEMENT SYSTEM</title>
+</head>
+<body>
+
+  <nav class="topnav">
+    <a href="{{ url_for('main') }}"><h2>TaskMaster</h2></a>
+   
+    <input type="text" placeholder="Search..">
+  </nav>
+  <label for="role_id">Role ID</label>
+  <input type="number" id="role_id" name="role_id" required>
+  <div class="create">
+ 
+    <div class="container">
+      <div class="box">Create a wonderful task management<br> experience! </div>
+      <div class="box overlay">Invite friends and Assign <br>them into a project.</div>
+  </div>
+
+  <form action="{{ url_for('admin_createaccount') }}" method="post">
+    <center>
+      <h1>Create New Admin Account</h1>
+    <h4>Already Registered?   <a href="{{ url_for('admin_login') }}">Login</h4></a></center>
+    <label for="fname">First Name</label>
+    
+    <td><input type="text" placeholder=" ex. Juan" minlength="5" maxlength="25" id="fname" name="fname" required><br>
+    <label for="Lname">Last Name</label>
+    <input type="text" placeholder=" ex. Dela Cruz" id="Lname" name="Lname" required><br>
+    
+    <label for="username">Username or Email</label>
+    <input type="text" placeholder=" ex. JCruz123@gmail.com" minlength="5" maxlength="40" id="username" name="username" required><br>
+    
+    <div class="login-password">
+        <label for="password">Password (16 characters)</label>
+        <div class="input-group">
+            <input type="password" minlength="8" maxlength="16" placeholder=" ********" id="password" name="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+            <div class="input-group-addon" onclick="togglePasswordVisibility()">
+                <i class="bi-eye-slash" id="eye-icon"></i>
+            </div>
+        </div>
+    </div><br>
+    
+    <label for="passwordagain">Input Password Again</label>
+    <input type="password" maxlength="16" placeholder=" ********" id="passwordagain" name="passwordagain" required><br>
+    
+    <label for="birth">Date of Birth</label>
+    <input type="date" id="birth" name="birth" required>
+    
+    <div class="sign">
+        <button type="submit" class="signupbtn">Sign Up</button>
+    </div>
+  </form>
+
+  <div id="message">
+    <h3>Password must contain the following:</h3>
+    <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+    <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+    <p id="number" class="invalid">A <b>number</b></p>
+    <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+    <p id="strongpass" class="invalid">Strong <b>Password</b></p>
+  </div>
+  </div>
+  <script src="{{ url_for('static', filename='js/createacc.js') }}" defer></script>
+
+</body>
+</html>
+

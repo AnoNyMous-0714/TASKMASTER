@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"><link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/HomePageStyle.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sidebarstyle.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/calendar.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<title>PSBA MANAGEMENT SYSTEM</title>
+</head>
+<body>
+<!-- The Bar at the top ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<nav class="topnav">
+  <a href="{{ url_for('dashboard') }}"><h2>TaskMaster</h2></a>
+
+  <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search.." autocomplete="off">
+      <div class="autocomplete-results"></div>
+  </div>
+
+  <button class="darkmode" id="darkModeToggle"><i class="fas fa-moon" id="moonIcon"></i></button>
+</nav>
+
+<div class="autocomplete-results" id="autocompleteResults"></div>
+
+<div id="wrappers">
+  <div class="sidebar close">
+    <div class="logo-details">
+      <i class='bx bx-menu'></i>
+      <span class="logo_name">
+          <div class="editable" onclick="makeEditable(this)">
+              <span class="display placeholder">{{ username }}</span>
+              <input size="15" type="text" class="edit-input" value="" onblur="saveName(this.parentElement)" onkeypress="handleKeyPress(event, this.parentElement)">
+          </div>
+      </span>
+  </div>
+    <ul class="nav-links">
+      <li>
+        <a href="{{ url_for('homepage', project_id=project_id) }}">
+          <i class='bx bx-grid-alt' ></i>
+          <span class="link_name">Dashboard</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Dashboard</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+            <a href="{{ url_for('about') }}">
+            <i class="fa-regular fa-address-card"></i>
+            <span class="link_name">About Us</span>
+          </a>
+        </div>
+        
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">About Us</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i class='bx bx-cog' ></i>
+            <span class="link_name">Settings</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Settings</a></li>
+          <li><a href="{{ url_for('help') }}">Help</a></li>
+          
+        </ul>
+      </li>
+     
+      <li>
+        <div class="profile-details">
+            <div class="profile-content">
+              <a href="{{ url_for('profile') }}">
+                <img src="{{ profile_picture }}" alt="profileImg">
+              </a>
+            </div>
+            <div class="name-job">
+              <div class="profile_name">{{ first_name }} {{ last_name }}</div>
+            </div>
+            <form action="{{ url_for('logout') }}" method="POST">
+              <button type="submit" class="logout-btn"><i class='bx bx-log-out' ></i></button>
+            </form>
+          </div>
+    </li>
+    </ul>
+    </div>
+    </li>
+    </ul>
+    </div>
+
+  <div class="content">
+    <section class="home-section">
+      <div class="home-content">
+
+        {% for project in projects %}
+           
+                <p>{{ project.project_name }}</p>
+           
+        {% endfor %}
+      </div>
+      
+        <div class="invite_create">
+  <button class="buttoninv" id="openInviteModal">Invite</button>
+  <button class="buttoncreate" id="openCreateModal"><span class="tooltiptext">Create Task</span></button>
+</div>
+
+<div class="bgmodal" id="bgInviteModal">
+  <div id="inviteModal" class="modalinvite">
+      <div class="modal-content">
+          <span class="close invite-close">&times;</span>
+          <h1 class="invitetask">Invite Members</h1>
+          <div id="wraps">
+              <form id="inviteForm">
+                  <input type="hidden" id="project_id" name="project_id" value="{{ project_id }}">
+                  <label for="invited_user_email">Invite User by Email:</label>
+                  <input type="email" id="invited_user_email" name="invited_user_email" required>
+                  <label for="manualRole">Role:</label>
+                  <input type="text" id="manualRole" name="role" placeholder="Enter role" required>
+                  <label for="message">Message:</label>
+                  <textarea id="message" name="message" rows="4" required></textarea>
+                  <button type="button" id="inviteButton">Invite</button>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Create Modal -->
+<div class="bgmodal" id="bgCreateModal">
+  <div id="createModal" class="modal">
+    <div class="modal-content">
+      <span class="close create-close">&times;</span>
+      <h1 class="createtask">Create Task</h1>
+      <form method="POST" action="{{ url_for('create_task') }}">
+        <div id="wraps">
+          <div class="parentcreate">
+            <div class="title" id="createtitle">
+              <input type="text" placeholder="Title" minlength="" maxlength="" id="task_name" name="task_name" required>
+            </div>
+          </div>
+        </div>
+        <div class="desc">
+          <textarea placeholder="Description" id="task_desc" name="task_desc" required></textarea>
+        </div>
+        <div class="desc">
+          <input type="date" id="schedule" name="schedule" required>
+        </div>
+        <div class="desc">
+          <input type="time" id="schedule_time" name="schedule_time" required>
+        </div>
+        <div class="desc">
+          <select id="priority" name="priority" required>
+            <option value="">Select Priority</option>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+          </select>
+        </div>
+        <input type="hidden" name="project_id" value="{{ project_id }}">
+        {% if error %}
+        <div class="error">{{ error }}</div>
+        {% endif %}
+        <div class="threebtn">
+          <button class="createbtn">Create</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+      
+<!-- Schedule Modal ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+      <div class="bgcalendarmodal" id="bgscheduleModal">
+          <div id="scheduleModal" class="modalcalendar">
+              <div class="modal-content-calendar">
+                  <span class="close schedule-close">&times;</span>
+                  <h1 class="calendartask">Calendar Task</h1>
+                  <div id="wraps">
+                    <div class="containercalendar">
+                        <div class="left">
+                          <div class="calendarschedule">
+                            <div class="month">
+                              <i class="fas fa-angle-left prev"></i>
+                              <div class="date">december 2015</div>
+                              <i class="fas fa-angle-right next"></i>
+                            </div>
+                            <div class="weekdays">
+                              <div>Sun</div>
+                              <div>Mon</div>
+                              <div>Tue</div>
+                              <div>Wed</div>
+                              <div>Thu</div>
+                              <div>Fri</div>
+                              <div>Sat</div>
+                            </div>
+                            <div class="days"></div>
+                            <div class="goto-today">
+                              <div class="goto">
+                                <input type="text" placeholder="mm/yyyy" class="date-input" />
+                                <button class="goto-btn">Go</button>
+                              </div>
+                              <button class="today-btn">Today</button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="right">
+                          <div class="today-date">
+                            <div class="event-day">wed</div>
+                            <div class="event-date">12th december 2022</div>
+                          </div>
+                          <div class="events"></div>
+                          <div class="add-event-wrapper">
+                            <div class="add-event-header">
+                              <div class="title">Add Event</div>
+                              <i class="fas fa-times close"></i>
+                            </div>
+                            <div class="add-event-body">
+                              <div class="add-event-input">
+                                <input type="text" placeholder="Event Name" class="event-name" />
+                              </div>
+                              <div class="add-event-input">
+                                <input
+                                  type="text"
+                                  placeholder="AM"
+                                  class="event-time-from"
+                                />
+                              </div>
+                              <div class="add-event-input">
+                                <input
+                                  type="text"
+                                  placeholder="PM"
+                                  class="event-time-to"
+                                />
+                              </div>
+                            </div>
+                            <div class="add-event-footer">
+                              <button class="add-event-btn">Add Event</button>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="add-event">
+                          <i class="fas fa-plus"></i>
+                        </button>
+                      </div>
+                  
+                  <div class="scheduleactive">
+                      <button class="backbtn" id="openCreateModal1"><i class="fa-solid fa-arrow-left"></i></button>
+                      <button class="schedactive">Schedule</button>
+                      <button class="assignbtn" id="openAssignModal2">Assign</button>
+                      <button class="createbtnschedule">Create Task</button>
+                    </div>
+                  </div>
+      
+              </div>
+          </div>
+      </div>
+      
+<!-- Assign Modal ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<div class="bgmodal" id="bgassignModal">
+  <div id="assignModal" class="modalassign">
+      <div class="modal-content">
+          <span class="close assign-close">&times;</span>
+          <h1 class="invitetask">Invite Members</h1>
+          <div id="wraps">
+              <div class="parentcontains">
+               
+                  <div class="contains" id="contains1">
+                    
+                      <h3>Add People</h3>
+                      <div class="Mcontainer">
+                      <div id="memberList" class="member-list">
+                          <!-- Member containers will be populated here -->
+                      </div>
+                    </div>
+                  </div>
+                  <button class="addp" id="openSelectoneModal">Add</button>
+              </div>
+          </div>
+          <div class="mssg">
+              <textarea class="mssgs" placeholder="Messages"></textarea>
+          </div>
+          <div class="assigns">
+              <button class="backbtn" id="openCreateModal2"><i class="fa-solid fa-arrow-left"></i></button>
+              <button class="schedbtn" id="openScheduleModal2">Schedule</button>
+              <button class="assignactive">Assign</button>
+              <button class="createbtnassign">Create</button>
+          </div>
+      </div>
+  </div>
+</div>
+    
+      <!-- Calendar Modal  Leave it will not be used anymore-------------------------------------------------------------------------------------------------------------------------------------------- 
+      <div class="bgcalendarmodal" id="bgcalendarModal">
+          <div id="calendarModal" class="modalcalendar">
+              <div class="modal-content-calendar">
+                  <span class="close calendar-close">&times;</span>
+                  <h1 class="calendartask">Calendar Task</h1>
+                  <div id="wraps">
+                      <div class="containercalendar">
+                          <div class="left">
+                            <div class="calendarschedule">
+                              <div class="month">
+                                <i class="fas fa-angle-left prev"></i>
+                                <div class="date">december 2015</div>
+                                <i class="fas fa-angle-right next"></i>
+                              </div>
+                              <div class="weekdays">
+                                <div>Sun</div>
+                                <div>Mon</div>
+                                <div>Tue</div>
+                                <div>Wed</div>
+                                <div>Thu</div>
+                                <div>Fri</div>
+                                <div>Sat</div>
+                              </div>
+                              <div class="days"></div>
+                              <div class="goto-today">
+                                <div class="goto">
+                                  <input type="text" placeholder="mm/yyyy" class="date-input" />
+                                  <button class="goto-btn">Go</button>
+                                </div>
+                                <button class="today-btn">Today</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="right">
+                            <div class="today-date">
+                              <div class="event-day">wed</div>
+                              <div class="event-date">12th december 2022</div>
+                            </div>
+                            <div class="events"></div>
+                            <div class="add-event-wrapper">
+                              <div class="add-event-header">
+                                <div class="title">Add Event</div>
+                                <i class="fas fa-times close"></i>
+                              </div>
+                              <div class="add-event-body">
+                                <div class="add-event-input">
+                                  <input type="text" placeholder="Event Name" class="event-name" />
+                                </div>
+                                <div class="add-event-input">
+                                  <input
+                                    type="text"
+                                    placeholder="AM"
+                                    class="event-time-from"
+                                  />
+                                </div>
+                                <div class="add-event-input">
+                                  <input
+                                    type="text"
+                                    placeholder="PM"
+                                    class="event-time-to"
+                                  />
+                                </div>
+                              </div>
+                              <div class="add-event-footer">
+                                <button class="add-event-btn">Add Event</button>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="add-event">
+                            <i class="fas fa-plus"></i>
+                          </button>
+                        </div>
+                    
+                        
+          </div>
+      </div>
+      </div>
+      </div>
+      ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+      
+      <!-- Assign Member Select -->
+      <div class="bgmodal" id="bgselec1Modal">
+        <div id="select1Modal" class="modal">
+            <div class="modal-content">
+                <span class="close select1-close">&times;</span>
+                <h1 class="select1">Select a Member</h1>
+                <div id="wraps">
+                    <div id="usersList">
+                      <div class="member-container">
+                        <button class="memberchoose">
+                          <div class="member-details">
+                            <p>Loading members...</p>
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+<!-- Invite Member Select Modal -->
+<div class="bgmodal" id="bgselec2Modal">
+  <div id="select2Modal" class="modal">
+    <div class="modal-content">
+      <span class="close select2-close">&times;</span>
+      <h1 class="select2">Select a Member</h1>
+      <div id="wraps">
+        <p>Members</p>
+        <div id="membersList"></div> <!-- Display list of members -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="wrapper">
+  <div class="parent-container" id="parent-container">
+
+<!-- Container 1 for To Do tasks -->
+<div class="child-container1" id="container1">
+<p>To Do</p>
+{% for task in tasks %}
+{% if task['status'] == 'Pending' %}
+<div class="modal" id="modal{{ loop.index }}">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal({{ loop.index }})">&times;</span>
+      <h1 class="select">{{ task['task_name'] }}</h1>
+      <div id="wraps">
+          <p>Task Description: {{ task['task_desc'] }}</p>
+          <p>Schedule: {{ task['schedule'] }}</p>
+          <p>Status: {{ task['status'] }}</p>
+          <p>Members:</p>
+      </div>
+  </div>
+</div>
+<div class="container_task1" id="task-container-{{ task['task_id'] }}">
+  <table>
+      <tbody>
+          <tr>
+            <td>
+              <button class="TaskName" onclick="openModal({{ loop.index }})">{{ task['task_name'] }}</button>
+              <p class="scheduletxtdoing" id="openSelecttwoModal{{ loop.index }}" onclick="openModal({{ loop.index }})">In Progress</p>
+          </td>
+              <td>
+                  <div class="dropdown_priorityDo">
+                      <button onclick="myPriorityDo('{{ task['task_id'] }}')" class="prioritybtnDo" id="prioritybtnDo{{ task['task_id'] }}">
+                          <i class="fa-solid fa-ellipsis"></i>
+                      </button>
+                      <div id="myPriorityToDo{{ task['task_id'] }}" class="priority-contentDo">
+                          <div class="status-trash-container">
+                              <p>Status:</p>
+                              <button class="trashbtn" onclick="deleteTask('{{ task['task_id'] }}')">
+                                  <i class='bx bx-trash'></i>
+                              </button>
+                          </div>
+                          <form action="/update_status/{{ task['task_id'] }}/In Progress" method="POST">
+                              <input type="hidden" name="project_id" value="{{ project_id }}">
+                              <button type="submit" class="btnstatuspending">
+                                  <p>Pending</p>
+                              </button>
+                          </form>
+
+                          <form action="/update_status/{{ task['task_id'] }}/Pending" method="POST">
+                              <input type="hidden" name="project_id" value="{{ project_id }}">
+                              <button type="submit" class="btnincomplete">
+                                  <p>Incomplete</p>
+                              </button>
+                          </form>
+                      </div>
+                  </div>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+{% endif %}
+{% endfor %}
+</div>
+
+<!-- Container 2 for Doing tasks -->
+<div class="child-container2" id="container2">
+<p>Doing</p>
+{% for task in tasks %}
+{% if task['status'] == 'In Progress' %}
+<div class="modal" id="modal{{ loop.index }}">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal({{ loop.index }})">&times;</span>
+      <h1 class="select">{{ task['task_name'] }}</h1>
+      <div id="wraps">
+          <p>Task Description: {{ task['task_desc'] }}</p>
+          <p>Schedule: {{ task['schedule'] }}</p>
+          <p>Status: {{ task['status'] }}</p>
+          <p>Members:</p>
+      </div>
+  </div>
+</div>
+    <div class="container_task2" id="task-container-{{ task['task_id'] }}">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <button class="TaskName" onclick="openModal({{ loop.index }})">{{ task['task_name'] }}</button>
+                        <p class="scheduletxtdoing" id="openSelecttwoModal{{ loop.index }}" onclick="openModal({{ loop.index }})">In Progress</p>
+                    </td>
+                    <td>
+                      <div class="dropdown_priorityDo">
+                        <button onclick="myPriorityDo('{{ task['task_id'] }}')" class="prioritybtnDo" id="prioritybtnDo{{ task['task_id'] }}">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </button>
+                        <div id="myPriorityToDo{{ task['task_id'] }}" class="priority-contentDo">
+                            <div class="status-trash-container">
+                                <p>Status:</p>
+                                <button class="trashbtn" onclick="deleteTask('{{ task['task_id'] }}')">
+                                    <i class='bx bx-trash'></i>
+                                </button>
+                            </div>
+                            <form action="/update_status/{{ task['task_id'] }}/In Progress" method="POST">
+                                <input type="hidden" name="project_id" value="{{ project_id }}">
+                                <button type="submit" class="btnstatuspending">
+                                    <p>Pending</p>
+                                </button>
+                            </form>
+  
+                            <form action="/update_status/{{ task['task_id'] }}/Pending" method="POST">
+                                <input type="hidden" name="project_id" value="{{ project_id }}">
+                                <button type="submit" class="btnincomplete">
+                                    <p>Incomplete</p>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endif %}
+{% endfor %}
+</div>
+
+<!-- Container 3 for Done tasks -->
+<div class="child-container3" id="container3">
+<p>Done</p>
+{% for task in tasks %}
+{% if task['status'] == 'Completed' %}
+<div class="modal" id="modal{{ loop.index }}">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal({{ loop.index }})">&times;</span>
+      <h1 class="select">{{ task['task_name'] }}</h1>
+      <div id="wraps">
+          <p>Task Description: {{ task['task_desc'] }}</p>
+          <p>Schedule: {{ task['schedule'] }}</p>
+          <p>Status: {{ task['status'] }}</p>
+          <p>Members:</p>
+      </div>
+  </div>
+</div>
+    <div class="container_task3" id="task-container-{{ task['task_id'] }}">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <button class="TaskName2" id="openSelecttwoModal{{ loop.index }}" onclick="openModal({{ loop.index }})">{{ task['task_name'] }}</button>
+                        <p class="scheduletxtdone" id="openSelecttwoModal{{ loop.index }}" onclick="openModal({{ loop.index }})">Complete</p>
+                    </td>
+                    
+                    <td>
+                      <div class="dropdown_priorityDo">
+                        <button onclick="myPriorityDo('{{ task['task_id'] }}')" class="prioritybtnDo" id="prioritybtnDo{{ task['task_id'] }}">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </button>
+                        <div id="myPriorityToDo{{ task['task_id'] }}" class="priority-contentDo">
+                            <div class="status-trash-container">
+                                <p>Status:</p>
+                                <button class="trashbtn" onclick="deleteTask('{{ task['task_id'] }}')">
+                                    <i class='bx bx-trash'></i>
+                                </button>
+                            </div>
+                            <form action="/update_status/{{ task['task_id'] }}/In Progress" method="POST">
+                                <input type="hidden" name="project_id" value="{{ project_id }}">
+                                <button type="submit" class="btnstatuspending">
+                                    <p>Pending</p>
+                                </button>
+                            </form>
+  
+                            <form action="/update_status/{{ task['task_id'] }}/Pending" method="POST">
+                                <input type="hidden" name="project_id" value="{{ project_id }}">
+                                <button type="submit" class="btnincomplete">
+                                    <p>Incomplete</p>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                   
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endif %}
+{% endfor %}
+</div>
+
+<!-- Beside the three containers which is workspace ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+<ul class="workspace">
+  <li>
+    <div class="invited-members">
+      <h3>Invited Members:</h3>
+      <ul>
+        {% for member in invited_members %}
+        <li>
+          <span class="tooltip">
+            {{ member[0] }} {{ member[1] }}
+            <span class="tooltiptext">{{ member[3] }}</span>
+          </span>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </li>
+
+  </div>
+</div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    const dateInput = document.getElementById('schedule');
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.setAttribute('min', today);
+  });
+</script>
+
+    <script src="{{ url_for('static', filename='js/changecolor.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='js/invite.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='js/calendar.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='js/dropdownsettings.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='js/profile.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='js/TaskModal.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='js/tasknameEDIT.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='js/sidebar.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='js/colormode.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='js/search.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='js/search.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='js/invitemembers.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='js/deletetask.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='js/usernamesave.js') }}" defer></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+</body>
+</html>

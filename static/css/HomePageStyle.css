@@ -1,0 +1,2303 @@
+/* Default light mode styles */
+body {
+  background-color: #f0f0f0; /* Example light background color */
+  color: #333; /* Example light text color */
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #3e3e3e; 
+/* Example dark background color */
+/* Example dark text color */
+}
+
+/* Additional styles for dark mode if needed */
+
+          .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+          }
+          
+          .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; 
+            left: 50%;
+            margin-left: -60px; 
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 20px;
+          }
+          .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+          }
+          .invited-members ul {
+            list-style-type: none; 
+            padding: 0; 
+            margin: 0; 
+          }
+          .invited-members li {
+            margin: 0; 
+            padding: 0; 
+          }
+          
+          .invited-members li + li {
+            margin-top: -40px; /* Remove spacing between list items */
+          }
+
+
+/* If you're using a specific ID */
+#moonIcon {
+  color: rgb(230, 225, 225);
+  margin-left: -150px;
+  margin-top: 5px;
+  font-size: 35px; /* Change the moon icon color to white */
+}
+
+.success-popup {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure popup appears on top of other elements */
+}
+
+          .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+          }
+          .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 20px;
+          }
+          .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+          }
+          .invited-members ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+          }
+          .invited-members li {
+            margin: 0;
+            padding: 0;
+          }
+          .invited-members li + li {
+            margin-top: -40px; /* Remove spacing between list items */
+          }
+
+
+*  {
+  margin: 0;
+}
+
+.pngsample{
+width: 100px;
+height: 100px;
+z-index: -1;
+margin-top: 300px;
+margin-left: 100px;
+}
+
+.home-content p{
+margin-left: 200px;
+margin-top: 200px;
+height: 200px;
+width: 200px;
+}
+
+  
+
+
+:root {
+  --primary-clr: rgb(111,133,139);
+}
+
+
+
+
+.topnav {
+  background: black;
+  top: 10;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  padding-bottom: 19px;
+}
+
+.topnav h2 {
+  margin-top: 2px;
+  float: left;
+  margin-left: 4vw;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: white;
+}
+
+.search-container {
+  position: relative;
+  margin-left: 20px; /* Adjust as needed */
+}
+
+.topnav input[type=text] {
+  background-color: white;
+  border: none;
+  padding: 10px;
+  width: 240px;
+  height: 10px;
+  font-size: 12px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: all 0.3s ease;
+  margin-left: 1050px;
+  margin-top: 5px;
+}
+
+.autocomplete-results {
+  position: absolute;
+  top: 74px; /* Position below the search input */
+  left: 1400px;
+  width: 100%;
+  max-width: 300px;
+  background-color: #f1f1f1; /* Default background color */
+  z-index: 999;
+  display: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.autocomplete-results.active {
+  display: block;
+  background-color: #000000; /* Gray background color */
+}
+
+.autocomplete-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.autocomplete-item:hover {
+  background-color: #838383; /* Light gray background color on hover */
+}
+
+
+/* Style the active link (or home/logo) */
+.active {
+background-color: #04AA6D;
+color: white;
+margin-left: 40px;
+}
+
+.fa.fa-bars {
+margin-left: -200px;
+font-size: 30px;
+margin-top: 20px;
+}
+
+/* Side Bar.............................................................................................................................................................................................................................................. */ 
+
+/* invite_create.............................................................................................................................................................................................................................................. */ 
+.invite_create{
+  display: flex;
+}
+
+.edit-input {
+  display: none;
+}
+
+.invite_create i{
+  margin-left: 100px;
+  margin-top: 120px;
+  display: inline-block;
+  font-size: 25px;
+}
+
+.parent-container {
+  margin-top: 25px;
+  margin-left: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+  
+
+}
+
+#container1 {
+  width: 100%;
+  max-width: 370px;
+  min-height: 250px;
+  display: inline-block;
+  background: #B0E0E6;
+  box-shadow: 0px 10px 10px 2px;
+  max-height: 770px;
+  border: none;
+  padding: 20px;
+  overflow: auto;
+  height: 100%;
+  border-radius: 10px;
+  }
+
+  #container1::-webkit-scrollbar {
+    width: 0px;
+    background-color: #ffffff;
+  }
+  
+
+  #container2 {
+      width: 100%;
+  max-width: 370px;
+  min-height: 250px;
+  display: inline-block;
+  background: #F1E9D2;
+  box-shadow: 0px 10px 10px 2px;
+  max-height: 600px;
+  border: none;
+  overflow: visible;
+  padding: 20px;
+  border-radius: 10px;
+  overflow: auto;
+      }
+      #container2::-webkit-scrollbar {
+        width: 0px;
+        background-color: #ffffff;
+      }
+      #container3 {
+          width: 100%;
+          max-width: 370px;
+          min-height: 250px;
+          background: #9CAF88;
+        box-shadow: 0px 10px 10px 2px;
+          display: inline-block;
+          max-height: 600px;
+          border: none;
+          overflow: visible; 
+          padding: 20px;
+          overflow: auto;
+          border-radius: 10px;
+          }
+          #container3::-webkit-scrollbar {
+            width: 0px;
+            background-color: #ffffff;
+          }
+          #container1 p{
+              margin-left: 10px;
+              margin-top: 10px;
+              font-size: 20px;
+              font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+          }
+          #container2 p{
+              margin-left: 10px;
+              margin-top: 10px;
+              font-size: 20px;
+              font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+          }
+
+          #container3 p{
+              margin-left: 10px;
+              margin-top: 10px;
+              font-size: 20px;
+              font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+          }
+
+          .buttoninv {background-color: #000000;
+              border: 1px solid black;
+              color: rgb(255, 255, 255);
+              padding: 7px 40px;
+              text-align: center;
+              text-decoration: none;
+              font-size: 16px;
+              font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+              margin: 50x 2px;
+              cursor: pointer;
+              margin-left: 839px;
+             margin-top: -20px;
+              position: absolute;
+              display: inline;
+              border-radius: 8px 8px;
+           } /* Blue */
+
+           .buttoninv:hover{
+              background-color: rgb(206, 206, 206);
+              color: black;
+            
+            }
+
+            .buttoncreate {
+              position: fixed;
+              bottom: 30px;
+              right: 30px;
+              width: 55px;
+              height: 55px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 1rem;
+              color: #000000;
+              border: 5px solid #878895;
+              opacity: 0.5;
+              border-radius: 50%;
+              background-color: transparent;
+              cursor: pointer;
+              margin-bottom: 740px;
+            }
+            
+            .buttoncreate:hover {
+              opacity: 5;
+            }
+            
+            .buttoncreate::before,
+            .buttoncreate::after {
+              content: '';
+              position: absolute;
+              width: 60%;
+              height: 2px;
+              background-color: #000000;
+            }
+            
+            .buttoncreate::before {
+              transform: rotate(90deg);
+            }
+            
+            .buttoncreate::after {
+              transform: rotate(0deg);
+            }
+            
+            .buttoncreate i {
+              pointer-events: none;
+            }
+            
+             
+           #iconstar{
+              margin-left: 190px;
+              color: black;
+              position: fixed;
+              margin-top: 115px;
+           }
+
+
+
+          
+          
+          .buttoncreate .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: #000000;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 20%;
+            left: 50%;
+            margin-left: -170px;
+            opacity: 0;
+            transition: opacity 0.3s;
+          }
+          
+          .buttoncreate .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 45%;
+            left: 100%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #000000 transparent transparent transparent;
+          }
+          
+          .buttoncreate:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+          }
+
+
+           
+
+           
+
+          
+            .workspace {
+              display: flex;
+              flex-direction: column; /* Align items vertically */
+              align-items: flex-start; /* Align items to the start */
+            }
+
+            #works {
+              margin-top: 10px;
+              margin-bottom: 25px;
+              font-size: 50px;
+              font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+              position: absolute;
+            }
+          
+          .workspace li {
+              margin-bottom: 50px; /* Remove the gap between list items */
+              list-style-type: none; /* Remove the dot beside the icon */
+              gap: 50px;
+              margin-left: 25px;
+              font-size: 25px;
+          }
+          
+          #icon2 {
+              display: flex;
+              align-items: center; /* Align icon and text vertically */
+              text-decoration: none; /* Remove default link underline */
+              color: black; /* Adjust link color */
+              position: absolute;
+              margin-top: 100px;
+          }
+
+          #icon3 {
+              display: flex;
+              align-items: center; /* Align icon and text vertically */
+              text-decoration: none; /* Remove default link underline */
+              color: black; /* Adjust link color */
+              position: absolute;
+              margin-top: 100px;
+          }
+
+          #icon4 {
+              display: flex;
+              align-items: center; /* Align icon and text vertically */
+              text-decoration: none; /* Remove default link underline */
+              color: black; /* Adjust link color */
+              position: absolute;
+              margin-top: 47px;
+              display: inline;
+          }
+          
+          
+          .workspace i {
+              margin-right: 10px; /* Adjust space between icon and text */
+          }
+       
+/* dropdown style Help.............................................................................................................................................................................................................................................. */ 
+
+.dropbtn {
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  background: none; /* Remove the background */
+  padding: 0; /* Remove the padding */
+  outline: none; /* Remove the default outline */
+  display: inline; /* Ensure the button is inline */
+  margin-left: 0px;
+  font-size: 25px;
+  min-width: 100px;
+  max-width: 250px;
+  white-space: nowrap; 
+overflow: hidden; 
+text-overflow: ellipsis;
+}
+
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-top: 50px;
+ 
+}
+
+/* Dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 150px;
+  border-radius: 10px;
+  align-items: center; /* Adjust this value as needed */
+ margin-top: 85px;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-left: 55px;
+  background: rgb(212, 212, 210);
+}
+
+/* Dropdown links */
+.dropdown-content a {
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  margin-top: 0; /* Reset margin-top */
+
+}
+
+/* Hover style for dropdown links */
+.dropdown-content a:hover {
+  background-color: #000000;
+  color: white;
+}
+
+/* Show the dropdown */
+.show {
+  display: block;
+}
+
+/* Adjust icon and text alignment */
+#icon4 {
+  display: flex;
+  align-items: center;
+  
+}
+
+#icon4 i {
+  margin-right: 10px; /* Space between icon and text */
+}
+
+/* dropdown priority Do.............................................................................................................................................................................................................................................. */ 
+
+.prioritybtnDo {
+color: rgb(0, 0, 0);
+padding: 0;
+margin: 0;
+font-size: 25px; 
+border: none;
+background: none;
+margin-left: 135px;
+overflow: auto;
+cursor: pointer;
+}
+
+
+/* Dropdown container */
+.dropdown_priorityDo {
+  display: inline-block;
+}
+
+
+/* Dropdown content */
+.priority-contentDo {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-left: 5px;
+}
+
+/* Dropdown links */
+
+
+/* Hover style for dropdown links */
+.dropdown_priorityDo a:hover {background-color: #ddd;}
+
+/* Show the dropdown */
+.show {
+  display: block;
+}
+
+.status-trash-container {
+  display: flex;
+  align-items: center;
+}
+
+.status-trash-container p {
+  margin: 0;
+  margin-right: 10px; /* Adjust spacing between text and icon as needed */
+}
+
+.trashbtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 50px;
+  color: red;
+  margin-top: 5px;
+}
+
+.trashbtn i {
+  font-size: 25px; /* Adjust icon size as needed */
+}
+
+
+
+
+.members-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust column width as needed */
+  gap: 10px; /* Adjust gap between items */
+}
+
+.member-item {
+  display: flex;
+  align-items: center;
+}
+
+.member-item label {
+  margin-left: 5px; /* Adjust margin between checkbox and label */
+}
+
+
+.members-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Adjust gap between items */
+}
+
+.member-item {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.member-name {
+  margin-left: 15px; /* Adjust margin between checkbox and name */
+}
+
+.member-selected {
+  justify-content: center;
+}
+
+
+.member-container {
+  background-color: #da0000; /* Light gray background */
+  padding: 5px 10px; /* Adjust padding as needed */
+  margin-bottom: 5px; /* Adjust margin as needed */
+}
+
+
+
+
+
+
+#inviteForm {
+  margin-top: 20px;
+}
+
+#inviteForm label, #inviteForm textarea, #inviteForm select {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+#inviteButton {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+#inviteButton:hover {
+  background-color: #45a049;
+}
+
+
+
+
+/* The modal style of create,, invite, assign, schedule.............................................................................................................................................................................................................................................. */ 
+
+.bgmodal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+}
+
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Sit on top */
+  padding-top: 5px; /* Location of the box */
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  width: 700px; /* Full width */
+  height: auto; /* Full height */
+  overflow: auto;/* Enable scroll if needed */
+}
+
+.modalinvite {
+display: none; /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 2; /* Sit on top */
+padding-top: 5px; /* Location of the box */
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+width: 700px; /* Full width */
+height: auto; /* Full height */
+overflow: auto;/* Enable scroll if needed */
+}
+
+.modalassign{
+display: none; /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 2; /* Sit on top */
+padding-top: 5px; /* Location of the box */
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+width: 700px; /* Full width */
+height: auto; /* Full height */
+overflow: auto;/* Enable scroll if needed */
+}
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  animation: animatetop 0.5s;
+  border-radius: 15px 15px; 
+}
+
+@keyframes animatetop {
+from {top:-300px; opacity:0} 
+to {top:0; opacity:1}
+}
+
+
+
+.createtask{
+  margin-left: 222px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-bottom: 50px;
+}
+
+.invitetask{
+  margin-left: 200px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-bottom: 20px;
+}
+
+.scheduletask{
+  margin-left: 210px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-bottom: 50px;
+}
+
+.assigntask{
+  margin-left: 210px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-bottom: 50px;
+}
+
+
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* Invite style Modal........................................................................................................................................................*/
+
+
+.parentcontains {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.contains {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-height: 200px;
+  max-width: 500px; /* Adjust max-width as needed */
+  padding: 10px;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 15px;
+  margin-left: 3px;
+  overflow: auto;
+}
+
+.contains p {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  margin-left: 20px;
+  color: #888;
+}
+
+
+.Mcontainer {
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  margin-right: 10px; /* Adjust margin as needed */
+  flex-shrink: 0; /* Prevent badge from shrinking */
+}
+
+
+
+
+.addp {
+  background-color: #000000;
+  border: 1px solid black;
+  color: #ffffff;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  margin-left: 4px;
+  margin-bottom: 1px;
+   /* Add margin to separate the button from the text */
+}
+
+.addp:hover {
+  background-color: rgb(206, 206, 206);
+  color: #000000;/* Darken the color slightly on hover */
+}
+
+
+.invite_members {
+  background-color: #000000;
+  border: 1px solid black;
+  color: #ffffff;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  margin-left: 233px;
+  margin-bottom: 1px;
+   /* Add margin to separate the button from the text */
+}
+
+.invite_members:hover {
+  background-color: rgb(206, 206, 206);
+  color: #000000;/* Darken the color slightly on hover */
+}
+
+
+
+
+.copybtn{
+  background-color: rgb(0, 0, 0);
+  border: 1px solid black;
+  color: #ffffff;
+  width: 560px;
+  height: 50px; /* Adjusted padding for a better look */
+  text-decoration: none;
+  font-size: 16px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  margin-left: 1px;
+  margin-bottom: 8px;
+  text-align: center;
+  justify-content: center;
+  text-align: center; /* Centering text */
+}
+
+
+
+.copybtn:hover {
+  background-color: rgb(206, 206, 206);/* Darken the color slightly on hover */
+  color: rgb(0, 0, 0);
+}
+
+.accss{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 540px;
+  height: 50px;
+  max-width: 600px; /* Adjust max-width as needed */
+  padding: 10px;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 15px;
+  margin-bottom: 10px;
+   /* Add margin to separate the button from the text */
+}
+
+.edits{
+  margin-top: 10px;
+}
+
+.editbtn{
+  margin-left: 10px;
+  color: blue;
+  border: none;
+  background: none;
+}
+
+.peopleaccess{
+  margin-left: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+}
+
+.accss p{
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  margin-left: 248px;
+  color: #888;
+}
+
+
+
+.mssgs {
+  width: 562px;
+  height: 300px;
+  margin-top: 10px;
+  max-width: 600px; /* Adjust max-width as needed */
+  padding: 10px; /* Adjust padding to move text a bit away from the edges */
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 15px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  box-sizing: border-box;
+  resize: none; /* Prevent resizing */
+  overflow: auto; /* Prevent scrollbars */
+}
+
+.mssgs::placeholder {
+  text-align: left;
+  vertical-align: top; 
+  line-height: 1; 
+  font-size: 20px;
+}
+
+.mssgs::-webkit-scrollbar {
+width: 0px;
+background-color: #ffffff;
+}
+
+/* Create style Modal ........................................................................................................................................................*/
+
+.parentcreate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.invitebtn{
+  background-color: #000000;
+  border: 1px solid black;
+  color: #fff;
+  padding: 10px 50px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  margin-left: 8px;
+  margin-bottom: 10px;
+}
+
+.invitebtn:hover {
+  background-color: rgb(206, 206, 206);
+  color: rgb(0, 0, 0); /* Darken the color slightly on hover */
+}
+
+
+.title input {
+width: 560px;
+  height: 60px; /* Adjust max-width as needed */
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 8px;
+  margin-bottom: 11px;
+  font-size: 20px; /* Match the placeholder font size */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  box-sizing: border-box;
+  resize: none; /* Prevent resizing */
+  text-align: center;
+   /* Adjust padding to match placeholder alignment */
+}
+
+.title input::placeholder {
+  text-align: center;
+  font-size: 20px; /* Match the text font size */ /* Match the text line height */
+}
+
+
+
+.desc textarea{
+  width: 560px;
+  height: 60px; /* Adjust max-width as needed */ /* Adjust padding to move text a bit away from the edges */
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 8px;
+  margin-bottom: 5px;
+  font-size: 15px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  box-sizing: border-box;
+  resize: none; /* Prevent resizing */
+  overflow: hidden; /* Prevent scrollbars */
+  text-align: center;
+  overflow-y: auto;
+}
+
+.desc textarea::placeholder {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 10px;
+  line-height: 2.3; 
+}
+
+.desc input{
+  width: 560px;
+  height: 60px; /* Adjust max-width as needed */ /* Adjust padding to move text a bit away from the edges */
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 8px;
+  margin-bottom: 5px;
+  font-size: 15px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  box-sizing: border-box;
+  resize: none; /* Prevent resizing */
+  overflow: hidden; /* Prevent scrollbars */
+  text-align: center;
+  overflow-y: auto;
+}
+
+.desc input::placeholder {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 10px;
+  line-height: 2.3; 
+}
+.schedbtn{
+  background-color: rgb(0, 0, 0);
+  border: 1px solid black;
+  color: #ffffff;
+  padding: 10px 50px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  margin-left: 0px;
+  margin-bottom: 8px;
+}
+
+.assignbtn{
+  background-color: rgb(0, 0, 0);
+  border: 1px solid black;
+  color: #ffffff;
+  padding: 10px 50px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  margin-left: 8px;
+  margin-bottom: 8px;
+}
+
+.createbtn{
+  background-color: rgb(0, 0, 0);
+  border: 1px solid black;
+  color: #ffffff;
+  padding: 10px 50px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  margin-left: 210px;
+  margin-bottom: 8px;
+}
+
+.createbtnschedule{
+  background-color: rgb(0, 0, 0);
+  border: 1px solid black;
+  color: #ffffff;
+  padding: 10px 50px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  margin-left: 220px;
+  margin-bottom: 8px;
+}
+.createbtnschedule:hover{
+background-color: rgb(0, 129, 28); /* Darken the color slightly on hover */
+color: rgb(0, 0, 0);
+}
+.createbtnassign{
+  background-color: rgb(0, 0, 0);
+  border: 1px solid black;
+  color: #ffffff;
+  padding: 10px 50px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  margin-left: 36.5px;
+  margin-bottom: 8px;
+}
+
+.schedbtn:hover {
+  background-color: rgb(206, 206, 206); /* Darken the color slightly on hover */
+  color: rgb(0, 0, 0);
+}
+
+.assignbtn:hover {
+  background-color: rgb(206, 206, 206); /* Darken the color slightly on hover */
+  color: rgb(0, 0, 0);
+}
+
+.createbtn:hover {
+  background-color: rgb(206, 206, 206); /* Darken the color slightly on hover */
+  color: rgb(0, 0, 0);
+}
+
+.createbtnassign:hover {
+  background-color: rgb(206, 206, 206); /* Darken the color slightly on hover */
+  color: rgb(0, 0, 0);
+}
+
+.scheduleactive{
+  margin-top: 10px;
+}
+
+.backbtn{
+  background-color: rgb(0, 0, 0);
+  border: 1px solid black;
+  color: #ffffff;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  margin-left: 8px;
+  margin-bottom: 8px;
+}
+
+.backbtn:hover {
+  background-color: rgb(206, 206, 206); /* Darken the color slightly on hover */
+  color: rgb(0, 0, 0);
+}
+/* Schedule style Modal........................................................................................................................................................*/
+.parentcontains2 {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.contains1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  max-width: 800px; /* Adjust max-width as needed */
+  padding: 10px;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 15px;
+}
+
+#contains2 p {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  margin-left: 10px;
+  color: #888;
+}
+
+
+
+.edit1 {
+  background-color: #000000;
+  border: 1px solid black;
+  color: #ffffff;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  margin-left: 8px;
+  margin-bottom: 1px;
+   /* Add margin to separate the button from the text */
+}
+
+.edit1:hover {
+  background-color: rgb(206, 206, 206);
+  color: #000000;/* Darken the color slightly on hover */
+}
+
+
+.schedactive{
+  background-color: rgb(206, 206, 206);
+  border: 1px solid black;
+  color: #000000;
+  padding: 10px 50px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  margin-left: 0px;
+  margin-bottom: 8px;
+}
+
+
+.month {
+  padding: 30px 0px;
+  width: 100%;
+  background: radial-gradient(circle, rgba(111,133,139,1) 0%, rgba(135,154,141,1) 50%, rgb(174, 196, 189) 100%);
+  text-align: center;
+  border: 1px solid black;
+}
+
+
+/* Month list */
+.month ul {
+  margin: 0;
+  padding: 50px;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* Previous button inside month header */
+.month .prev {
+  float: left;
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+/* Next button */
+.month .next {
+  float: right;
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+.month ul{
+  list-style-type: none;
+}
+
+/* Weekdays (Mon-Sun) */
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+/* Days (1-31) */
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: #777;
+}
+
+/* Highlight the "current" day */
+.days li.active {
+  padding: 5px 0px;
+  background: #1abc9c;
+  color: white !important;
+  margin-left: 0px;
+}
+
+
+
+.event {
+  display: block;
+  background-color: #ffeb3b;
+  margin-top: 5px;
+  padding: 2px;
+  border-radius: 3px;
+}
+
+
+
+
+
+/* Assign style Modal........................................................................................................................................................*/
+
+
+.assigncontainer1 {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.containsassign1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  max-width: 800px; /* Adjust max-width as needed */
+  padding: 10px;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 15px;
+}
+
+#containsassignid1 p {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  margin-left: 10px;
+  color: #888;
+}
+
+
+
+.assignedit1 {
+  background-color: #000000;
+  border: 1px solid black;
+  color: #ffffff;
+  height: 50px;
+  width: 150px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  margin-left: 400px;
+  margin-top: 10px;
+  margin-bottom: 1px;
+   /* Add margin to separate the button from the text */
+}
+
+.assignedit1:hover {
+  background-color: rgb(206, 206, 206);
+  color: #000000;/* Darken the color slightly on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+.assignactive{
+  background-color: rgb(206, 206, 206);
+  border: 1px solid black;
+  color: #000000;
+  padding: 10px 50px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  margin-left: 0px;
+  margin-bottom: 8px;
+}
+
+.assigns{
+  margin-top: 10px;
+}
+
+
+
+.assigncontainertask {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  
+}
+
+.containsassigntask {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+  height: 50px;
+  max-width: 800px; /* Adjust max-width as needed */
+  padding: 10px;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 15px;
+  background: radial-gradient(circle, rgba(111,133,139,1) 0%, rgba(135,154,141,1) 50%, rgba(237,244,242,1) 100%);
+}
+
+
+#containsassignidtask p {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  margin-left: 17px;
+  color: #000000;
+}
+
+/* calendar style..........................................................................................................................................................................*/
+.bgcalendarmodal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+  
+}
+
+/* The Modal (background) */
+.modalcalendar {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Sit on top */
+  padding-top: 5px; /* Location of the box */
+  left: 50%;
+  top: 52%;
+  transform: translate(-50%, -50%);
+  width: 100%; /* Full width */
+  height: auto; /* Full height */
+  overflow: auto;/* Enable scroll if needed */
+}
+
+.calendartask{
+  margin-left: 350px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-bottom: 50px;
+}
+
+/* Modal Content */
+.modal-content-calendar {
+  position: relative;
+  background-color: #ffffff;
+  margin: auto;
+  padding: 20px;
+  border: 2px solid #000000;
+  width: 45%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  animation: animatetop 0.5s;
+  border-radius: 15px 15px; 
+  
+}
+
+@keyframes animatetop {
+from {top:-300px; opacity:0} 
+to {top:0; opacity:1}
+}
+
+.containercalendar {
+  overflow: hidden;
+  position: relative;
+  width: 700px;
+  max-height: 600px;
+  margin: 0 auto;
+  padding: 5px;
+  color: #fff;
+  display: flex;
+  border-radius: 10px;
+  background: radial-gradient(circle, rgba(111,133,139,1) 0%, rgba(135,154,141,1) 50%, rgb(145, 177, 168) 100%);
+}
+.left {
+  width: 60%;
+  padding: 20px;
+}
+.calendarschedule {
+  position: relative;
+  width: 400px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: #878895;
+  border-radius: 5px;
+  background-color: #fff;
+}
+/* set after behind the main element */
+.calendarschedule::before,
+.calendarschedule::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 12px;
+  height: 97%;
+  border-radius: 0 5px 5px 0;
+  background-color: #d3d4d6d7;
+  transform: translateY(-50%);
+}
+.calendarschedule::before {
+  height: 94%;
+  left: calc(100% + 12px);
+  background-color: rgb(153, 153, 153);
+}
+.calendarschedule .month {
+  width: 285px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-top: 10px;
+  margin-left: 5px;
+  color: rgb(0, 0, 0);
+}
+.calendarschedule .month .prev,
+.calendarschedule .month .next {
+  cursor: pointer;
+}
+.calendarschedule .month .prev:hover,
+.calendarschedule .month .next:hover {
+  color: var(--primary-clr);
+}
+.calendarschedule .weekdays {
+  width: 100%;
+  margin-bottom: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  background-color: white;
+}
+.weekdays div {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.calendarschedule .days {
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 15px;
+  font-weight: 50;
+  margin-left: -400px;
+  margin-top: 120px;
+  background-color: white;
+}
+.calendarschedule .days .day {
+  width: 13%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--primary-clr);
+  border: 1px solid #f5f5f5;
+}
+.calendarschedule .days .day:nth-child(7n + 1) {
+  border-left: 2px solid #f5f5f5;
+}
+.calendarschedule .days .day:nth-child(7n) {
+  border-right: 2px solid #f5f5f5;
+}
+.calendarschedule .days .day:nth-child(-n + 7) {
+  border-top: 2px solid #f5f5f5;
+}
+.calendarschedule .days .day:nth-child(n + 29) {
+  border-bottom: 2px solid #f5f5f5;
+}
+
+.calendarschedule .days .day:not(.prev-date, .next-date):hover {
+  color: #fff;
+  background-color: var(--primary-clr);
+}
+.calendarschedule .days .prev-date,
+.calendarschedule .days .next-date {
+  color: #b3b3b3;
+}
+.calendarschedule .days .active {
+  position: relative;
+  font-size: 15px;
+  color: #ffffff;
+  background-color: var(--primary-clr);
+  margin-left: -5px;
+
+}
+.calendarschedule .days .active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 10px 2px var(--primary-clr);
+  
+}
+.calendarschedule .days .today {
+  font-size: 2rem;
+}
+.calendarschedule .days .event {
+  position: relative;
+}
+.calendarschedule .days .event::after {
+  content: "";
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  width: 75%;
+  height: 6px;
+  border-radius: 30px;
+  transform: translateX(-50%);
+  background-color: var(--primary-clr);
+}
+.calendarschedule .days .day:hover.event::after {
+  background-color: #fff;
+}
+.calendarschedule .days .active.event::after {
+  background-color: #fff;
+  bottom: 20%;
+}
+.calendarschedule .days .active.event {
+  padding-bottom: 10px;
+}
+.calendarschedule .goto-today {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 82px;
+  padding: 0 20px;
+  margin-bottom: 20px;
+  margin-left: -415px;
+  color: var(--primary-clr);
+}
+.calendarschedule .goto-today .goto {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid var(--primary-clr);
+}
+.calendarschedule .goto-today .goto input {
+  width: 100%;
+  height: 30px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0 20px;
+  color: var(--primary-clr);
+  border-radius: 5px;
+}
+.calendarschedule .goto-today button {
+  padding: 5px 10px;
+  border: 1px solid var(--primary-clr);
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  color: var(--primary-clr);
+}
+.calendarschedule .goto-today button:hover {
+  color: #fff;
+  background-color: var(--primary-clr);
+}
+.calendarschedule .goto-today .goto button {
+  border: none;
+  border-left: 1px solid var(--primary-clr);
+  border-radius: 0;
+}
+.containercalendar .right {
+  position: relative;
+  width: 40%;
+  min-height: 100%;
+  padding: 0px 0;
+}
+
+.right .today-date {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0px;
+  align-items: center;
+  padding: 0 40px;
+  margin-left: -30px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+.right .today-date .event-day {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.right .today-date .event-date {
+  font-size: 20px;
+  font-weight: 400;
+  color: #000000;
+  margin-left: 40px;
+  margin-top: 5px;
+}
+.events {
+  width: 100%;
+  height: 100%;
+  max-height: 600px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding-left: 4px;
+}
+.events .event {
+  position: relative;
+  width: 95%;
+  min-height: 70px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0 20px;
+  padding-left: 50px;
+  color: #fff;
+  background: black;
+  cursor: pointer;
+}
+/* even event */
+.events .event:nth-child(even) {
+  background: transparent;
+}
+.events .event:hover {
+  background: linear-gradient(90deg, var(--primary-clr), transparent);
+}
+.events .event .title {
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+.events .event .title .event-title {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-left: 20px;
+}
+.events .event i {
+  color: white;
+  font-size: 0.5rem;
+}
+.events .event:hover i {
+  color: #fff;
+}
+.events .event .event-time {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #000000;
+  margin-left: 15px;
+  pointer-events: none;
+}
+.events .event:hover .event-time {
+  color: #fff;
+}
+/* add tick in event after */
+.events .event::after {
+  content: "✓";
+  position: absolute;
+  top: 0%;
+  right: 0;
+  font-size: 3rem;
+  line-height: 1;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.3;
+  color: var(--primary-clr);
+  transform: translateY(-50%);
+ background-color: white;
+ margin-left: 350px;
+}
+.events .event:hover::after {
+  display: flex;
+}
+.add-event {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #000000;
+  border: 2px solid #878895;
+  opacity: 0.5;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+}
+.add-event:hover {
+  opacity: 1;
+}
+.add-event i {
+  pointer-events: none;
+}
+.events .no-event {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #878895;
+}
+.add-event-wrapper {
+  position: absolute;
+  bottom: 100px;
+  left: 35%;
+  width: 90%;
+  max-height: 0;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: #fff;
+  transform: translateX(-50%);
+  transition: max-height 0.4s ease;
+}
+.add-event-wrapper.active {
+  max-height: 300px;
+}
+.add-event-header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  color: #000000;
+  border-bottom: 1px solid #f5f5f5;
+}
+.add-event-header .close {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.add-event-header .close:hover {
+  color: var(--primary-clr);
+}
+.add-event-header .title {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.add-event-body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 20px;
+}
+.add-event-body .add-event-input {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.add-event-body .add-event-input input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #f5f5f5;
+  padding: 0 10px;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #373c4f;
+}
+.add-event-body .add-event-input input::placeholder {
+  color: #a5a5a5;
+}
+.add-event-body .add-event-input input:focus {
+  border-bottom: 1px solid var(--primary-clr);
+}
+.add-event-body .add-event-input input:focus::placeholder {
+  color: var(--primary-clr);
+}
+.add-event-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.add-event-footer .add-event-btn {
+  height: 40px;
+  font-size: 1rem;
+  font-weight: 500;
+  outline: none;
+  border: none;
+  color: #fff;
+  background-color: var(--primary-clr);
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border: 1px solid var(--primary-clr);
+}
+.add-event-footer .add-event-btn:hover {
+  background-color: transparent;
+  color: var(--primary-clr);
+}
+
+
+/* Task Modal Style.............................................................................................................................................................................................................................................. */ 
+.TaskName {
+  margin-left: 7px;
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow:ellipsis;
+}
+
+.TaskName2 {
+  margin-left: 10px;
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow:ellipsis;
+  text-decoration-line: line-through; 
+}
+
+.TaskName {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  width: 170px;
+}
+
+.TaskName2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  width: 170px;
+}
+
+
+ 
+.btnstatusdone {
+  background: none;
+  cursor: pointer;
+  border: none;
+  font-size: 25px;
+  margin-left: 0px;
+  display: flex;
+  align-items: center;
+}
+
+
+
+.btnstatusdone p {
+  margin-left: 0;
+  font-size: 25px;
+  color: black;
+}
+
+.btnstatuspending {
+  background: none;
+  cursor: pointer;
+  border: none;
+  font-size: 25px;
+  margin-left: 0px;
+  display: flex;
+  align-items: center;
+}
+
+
+
+.btnstatuspending p {
+  margin-left: 0;
+  font-size: 25px;
+  color: black;
+}
+
+
+.btnincomplete {
+  background: none;
+  cursor: pointer;
+  border: none;
+  font-size: 25px;
+  margin-left: 0px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+
+.btnincomplete p {
+  margin-left: 0;
+  font-size: 25px;
+  color: black;
+}
+
+.btnstatusdone p:hover{
+  color: green;
+}
+
+.btnstatuspending:hover p {
+ color: orange;
+}
+
+.btnincomplete:hover p {
+  color: rgb(221, 0, 0);
+ }
+
+
+
+
+
+
+
+
+
+
+
+.edit-input {
+  display: none;
+}
+
+.container_task1 {
+  margin-top: 50px;
+  margin: 10px 0;
+  padding: 10px;
+  border: 3px solid #ccc;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(
+      to right, 
+      #ff0000 0%, 
+      #ff0000 5%, 
+      rgb(255, 255, 255) 5%, 
+      rgb(255, 255, 255)  100%
+    );
+  width: auto;
+}
+
+
+.container_task1 .scheduletxt {
+  font-family: 'Arial', sans-serif; /* Change font family */
+  font-size: 50px; /* Change font size */
+  display: flex;
+  align-items: center;
+  color: rgb(255, 0, 0);
+}
+
+.container_task1 .scheduletxt .fa-calendar {
+  margin-right: 10px;
+  height: auto;
+  color: red; /* Add some space between the icon and the text */
+}
+
+
+
+.container_task1:hover  {
+  box-shadow: 5px 10px 10px 5px rgba(0, 0, 0, 0.801);
+  transform: translateX(-10px); /* Moves the container 10px to the left */
+}
+
+
+
+.container_task2 {
+  margin: 10px 0;
+  padding: 10px;
+  border: 3px solid #ccc;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(
+      to right, 
+      #ff9900 0%, 
+      #ff9900 5%, 
+      #ffffff 5%, 
+      #ffffff 100%
+    );
+  width: auto;
+}
+
+.container_task2 .scheduletxtdoing {
+  font-family: 'Arial', sans-serif; /* Change font family */
+  font-size: 50px; /* Change font size */
+  display: flex;
+  align-items: center;
+  color: orange;
+}
+
+.container_task2:hover  {
+  box-shadow: 5px 10px 10px 5px rgba(0, 0, 0, 0.842);
+  transform: translateX(-10px); /* Moves the container 10px to the left */
+}
+
+
+.container_task3 {
+  margin: 10px 0;
+  padding: 10px;
+  border: 3px solid #ccc;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 5px;
+  background: linear-gradient(
+      to right, 
+      #00b35f  0%, 
+      #00b35f 5%, 
+      #ffffff 5%, 
+      #ffffff 100%
+    );
+  width: auto;
+}
+
+.container_task3 .scheduletxtdone {
+  font-family: 'Arial', sans-serif; /* Change font family */
+  font-size: 50px; /* Change font size */
+  display: flex;
+  align-items: center;
+  color: green;
+}
+
+
+
+.container_task3:hover  {
+  box-shadow: 5px 10px 10px 5px rgba(0, 0, 0, 0.836);
+  transform: translateX(-10px); /* Moves the container 10px to the left */
+}
+
+.member-container {
+border: 1px solid #000000;
+padding: 10px;
+margin: 10px 280px;
+border-radius: 5px;
+background-color: #000000;
+margin-left: 0px;
+}
+
+.member-container:hover {
+background: radial-gradient(circle, rgba(111, 133, 139, 1) 20%, rgba(111, 133, 139, 1) 20%, rgba(111, 133, 139, 1) 20%, rgb(0, 0, 0) 50%, rgb(0, 0, 0) 1%);
+color: rgb(255, 255, 255);
+}
+
+.memberchoose {
+width: 100%;
+text-align: left;
+border: none;
+background: none;
+cursor: pointer;
+}
+
+.member-container p{
+color: rgb(255, 255, 255);
+text-align: center;
+}
+
+.select1{
+margin-left: 200px;
+margin-bottom: 15px;
+}
+
+

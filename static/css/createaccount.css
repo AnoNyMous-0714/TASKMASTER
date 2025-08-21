@@ -1,0 +1,418 @@
+body{
+  background: rgb(239, 239, 239);
+  overflow-y: hidden;
+}
+
+.topnav {
+  background-color: rgb(0, 0, 0);
+  top: 0;
+  left: 0;
+  position: absolute;
+  width:100%;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  border-top: 2px solid rgb(0, 0, 0);
+  justify-content: center;
+  overflow: hidden;
+  
+  }
+  
+  .topnav h2 {
+  float: left;
+  margin-left: 125px;
+  font-family: Arial;
+  }
+  
+  .topnav .login {
+  margin-top: 10px;
+  margin-left: 1110px;
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px; 
+  padding: 10px 20px; 
+  border-radius: 25px; 
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  }
+a {
+  text-decoration: none;
+}
+input[type="checkbox"] {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+label[for="tos"] {
+  font-size: 14px;
+  color: #333;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-container input[type="checkbox"] {
+  margin-right: 10px;
+  margin-left: 240px;
+}
+
+.checkbox-container label {
+  font-size: 14px;
+  color: #333;
+}
+
+  .material-icons {
+  font-size: 25px;
+  margin-top: 17px;
+  margin-left: 1505px;
+  position: fixed;
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  border-color: white;
+  }
+  .fa-solid.fa-circle-info  {
+  font-size: 25px;
+  margin-top: 22px;
+  margin-left: 15px;
+  }
+
+  .create form {
+    background-color: white;
+    width: 600px;
+    padding: 85px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
+    display: inline-flex;
+    flex-direction: column;
+    margin-top: 130px; /* Adjust as needed */
+    margin-left: 270px;
+    margin-right: auto;
+    /* Center horizontally and position relative to surrounding content */
+    overflow-y: auto;
+   /* Ensure it doesn't take up more than 90% of the viewport width */
+  }
+  
+/*FORM */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 8px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+  
+  .create h1 {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .createaccount h3 {
+    font-family: 'DM Sans';
+  
+  }
+
+  .topnav input[type=text] {
+  
+    background-color: white;
+    
+    border: none;
+    background-image: url('searchicon.png');
+    margin-left: 1570px;
+    margin-top: 20px;
+    font-size: 12px;
+    align-items: center;
+    position: absolute;
+    height: 30px;
+    width: 260px;
+    display: flex;
+    font-size: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+    transition: all 0.3s ease;
+}
+  
+  .topnav i {
+      font-size: 40px;
+      margin-top: 14.5px;
+      margin-left: 365px;
+      position: absolute;
+  }
+  
+  .topnav a {
+      color: rgb(255, 255, 255);
+  }
+
+  .createaccount h1 {
+      margin-top: 150px;
+      font-size: 40px;
+      margin-left: 435px;
+      font-family:Arial;
+      position: absolute;
+      width: 100%;
+     position: fixed;
+  }
+
+  .createaccount a {
+      color: blue;
+      text-decoration: none;
+      font-family:Arial;
+      font-size: 18px;
+     
+  }
+
+  .createaccount h3 {
+      margin-left: 500px;
+      position: absolute;
+      margin-top: 225px;
+      width: 100%;
+      position: fixed;
+  }
+
+  
+
+
+  form label{
+      display: flex;
+      font-family: Arial;
+      
+  }
+
+  form input{
+      margin-top: 10px;
+      border-radius: 5px;
+      
+  }
+
+  form input[type="text"]
+{
+  height: 40px;
+  width: 300px;
+  border: 1px ridge rgb(154, 153, 153);
+  border-radius: 5px;
+  
+}
+
+form input[type="email"]
+{
+  height: 40px;
+  width: 300px;
+  border: 1px ridge rgb(154, 153, 153);
+  border-radius: 5px;
+  
+}
+
+
+form input[type="date"]
+{
+  height: 40px;
+  width: 300px;
+   border: 1px ridge rgb(154, 153, 153);
+  border-radius: 5px;
+  font-size: 15px;
+  text-align: center;
+  justify-content: center;
+  
+}
+
+  form{
+  margin-left: 475px;
+  position: fixed;
+  margin-top: 300px;
+  border-radius: 5px;
+  border: fixed;
+  
+  }
+
+  .sign button{
+  border: none;
+  background-color: black;
+  color: rgb(255, 255, 255);
+  padding: 20px 70px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  cursor: pointer;
+  margin-left: 280px;
+  margin-top: 30px;
+  border-radius: 20px;} /* Green */
+
+  .signupbtn:hover{
+    background-color: green;
+    transition: 0.7s;
+  }
+  .container {
+     box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.19);
+      width: 200px;
+      height: 200px;
+      position: relative;
+      margin-left: 1250px;
+      float: left;
+      position: fixed;
+      margin-top: 250px;
+      
+    }
+    .box {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      font-family: calibri;
+      border-radius: 5px;
+      width: 150%;
+      height: 100%;
+      position: absolute;
+      top: 5;
+      left: 0;
+      background: rgb(189, 236, 120);
+      padding-left: 10px;
+    
+      padding-top: 10px;
+    }
+    .overlay {
+      z-index: 9;
+      margin: 90px;
+      background: #009938;
+      padding-left: 10px;
+      font-family: calibri;
+      padding-top: 10px;
+      color: white;
+    }
+
+    input[type=password] {
+    height: 40px;
+    width: 300px;
+    border: 0.5px ridge rgb(154, 153, 153);
+    border-radius: 5px;
+
+  
+    }
+
+    input[type=password] {
+    height: 40px;
+    width: 300px;
+    border: 0.5px ridge rgb(154, 153, 153);
+    border-radius: 5px;
+    }
+
+    .input-group-addon i {
+      margin-left: 283.5px;
+      margin-top: -33.5px;
+      float: right;
+      cursor: pointer;
+      position: absolute;
+      font-size: large;
+      color: #000000;
+    }
+    
+    #message {
+      display: none;
+      background: #ffffff;
+      color: #000000;
+      position: absolute;
+      padding: 5px;
+      margin-top: 560px;
+      margin-left: 510px;
+      border: solid 1px rgb(116, 116, 116);
+    }
+    
+    #message p {
+      padding: 7px 35px;
+      font-size: 15px;
+    }
+    
+    /* Add a green text color and a checkmark when the requirements are right */
+    .valid {
+      color: green;
+
+    }
+
+  h4 {
+    font-family: arial;
+  }
+    
+    .valid:before {
+      position: relative;
+      left: -35px;
+      content: "✔";
+    }
+    
+    /* Add a red text color and an "x" icon when the requirements are wrong */
+    .invalid {
+      color: red;
+    }
+    
+    .invalid:before {
+      position: relative;
+      left: -35px;
+      content: "✖";
+      
+    }
+
+  

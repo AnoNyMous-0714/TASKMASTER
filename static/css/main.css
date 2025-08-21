@@ -1,0 +1,294 @@
+body {
+  background: white;
+    margin: 0; /* Ensure there is no margin on the body */
+    height: 100vh; /* Set body to full viewport height */
+    background: rgb(111,133,139);
+    background: radial-gradient(circle, rgba(111,133,139,1) 0%, rgba(135,154,141,1) 50%, rgba(237,244,242,1) 100%);
+    overflow: hidden;
+}
+
+.topnav {
+  background-color: rgb(0, 0, 0);
+  top: 0;
+  left: 0;
+  position: absolute;
+  width:100%;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  border-top: 2px solid rgb(0, 0, 0);
+  justify-content: center;
+  overflow: hidden;
+  
+  }
+  
+  .topnav h2 {
+  float: left;
+  margin-left: 125px;
+  font-family: Arial;
+  color: white;
+  }
+  
+  .topnav input[type=text] {
+  
+    background-color: white;
+    
+    border: none;
+    background-image: url('searchicon.png');
+    margin-left: 1570px;
+    margin-top: 20px;
+    font-size: 12px;
+    align-items: center;
+    position: absolute;
+    height: 30px;
+    width: 260px;
+    display: flex;
+    font-size: 12px;
+    box-shadow: 1px 1 10px rgba(1, 0, 0, 0.1);
+    
+    transition: all 0.3s ease;
+}
+  .topnav i {
+      font-size: 40px;
+      margin-top: 14.5px;
+      margin-left: calc(65.5vw + 290px); /* Adjust this value as needed */
+      position: absolute;
+     
+  }
+  
+  .topnav a {
+      color: black;
+  }
+
+  .title {
+    width: 100%;
+  }
+  
+  .title h1 {
+      margin-top: 200px;
+      font-size: 50px;
+      margin-left: 17.5%;
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      position: absolute;
+      
+  }
+  
+  .title h2{
+      margin-left: 18%;
+      font-family: Arial, Helvetica, sans-serif;
+      position: absolute;
+      margin-top: 280px;
+      font-size: 21px;
+      font-weight: lighter;
+  }
+  
+    .button3 {
+      margin-left: 95%;
+      font-family: Arial, Helvetica, sans-serif;
+      position: relative;
+      margin-top: 880px;
+      outline: none;
+      border: none;
+      box-shadow: inset;
+      background-color: #000000;
+      color: white;
+      transition: 0.7s;
+      font-size: 21px; }
+    
+      .button3:hover {
+        background-color: green;
+      }
+  
+    .button1 {background-color: #000000;
+      border: none;
+      color: white;
+      padding: 25px 50px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 30px 2px;
+      cursor: pointer;
+      margin-left: 18%;
+    position: absolute;
+    transition: 0.7s;
+    border-radius: 5px;
+  margin-top: 500px;} /* Green */
+  
+      
+    .button2 {background-color: #ffffff;
+      border: 1px solid black;
+      color: rgb(0, 0, 0);
+      padding: 25px 60px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 50x 2px;
+      cursor: pointer;
+      transition: 0.7s;
+      margin-left: calc(18% + 185px);
+      position: absolute;
+      border-radius: 5px;
+    margin-top: 500px;} /* Blue */
+  
+    .button1:hover{
+      background-color: rgb(139, 169, 93);
+    }
+  
+    .button2:hover{
+      background-color: rgb(139, 169, 93);
+    
+    }
+  
+    .button1:hover, .button1:active {color: black;}
+    .button2:hover, .button2:active {color: rgb(0, 0, 0);}
+
+   
+
+  @media only screen and (min-width: 561px) and (max-width: 1027) {
+
+    body {
+      background: white;
+        margin: 0; /* Ensure there is no margin on the body */
+        height: 100vh; /* Set body to full viewport height */
+        background: rgb(111,133,139);
+        background: radial-gradient(circle, rgba(111,133,139,1) 0%, rgba(135,154,141,1) 50%, rgba(237,244,242,1) 100%);
+        overflow: hidden;
+    }
+    
+    .topnav {
+      background-color: rgb(0, 0, 0);
+      top: 0;
+      left: 0;
+      position: absolute;
+      width:100%;
+      border-bottom: 2px solid rgb(0, 0, 0);
+      border-top: 2px solid rgb(0, 0, 0);
+      justify-content: center;
+      overflow: hidden;
+      
+      }
+      
+      .topnav h2 {
+      float: left;
+      margin-left: 125px;
+      font-family: Arial;
+      color: white;
+      }
+      
+      .topnav input[type=text] {
+      
+        background-color: white;
+        
+        border: none;
+        background-image: url('searchicon.png');
+        margin-left: 500px;
+        margin-top: 20px;
+        font-size: 12px;
+        align-items: center;
+        position: absolute;
+        height: 30px;
+        width: 260px;
+        display: flex;
+        font-size: 12px;
+        box-shadow: 1px 1 10px rgba(1, 0, 0, 0.1);
+        
+        transition: all 0.3s ease;
+    }
+      .topnav i {
+          font-size: 40px;
+          margin-top: 14.5px;
+          margin-left: calc(65.5vw + 290px); /* Adjust this value as needed */
+          position: absolute;
+         
+      }
+      
+      .topnav a {
+          color: black;
+      }
+    
+      .title {
+        width: 100%;
+      }
+      
+      .title h1 {
+          margin-top: 200px;
+          font-size: 50px;
+          margin-left: 17.5%;
+          font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+          position: absolute;
+          
+      }
+      
+      .title h2{
+          margin-left: 18%;
+          font-family: Arial, Helvetica, sans-serif;
+          position: absolute;
+          margin-top: 280px;
+          font-size: 21px;
+          font-weight: lighter;
+      }
+      
+        .button3 {
+          margin-left: 95%;
+          font-family: Arial, Helvetica, sans-serif;
+          position: relative;
+          margin-top: 880px;
+          outline: none;
+          border: none;
+          box-shadow: inset;
+          background-color: #000000;
+          color: white;
+          transition: 0.7s;
+          font-size: 21px; }
+        
+          .button3:hover {
+            background-color: green;
+          }
+      
+        .button1 {background-color: #000000;
+          border: none;
+          color: white;
+          padding: 25px 50px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 30px 2px;
+          cursor: pointer;
+          margin-left: 18%;
+        position: absolute;
+        transition: 0.7s;
+        border-radius: 5px;
+      margin-top: 500px;} /* Green */
+      
+          
+        .button2 {background-color: #ffffff;
+          border: 1px solid black;
+          color: rgb(0, 0, 0);
+          padding: 25px 60px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 50x 2px;
+          cursor: pointer;
+          transition: 0.7s;
+          margin-left: calc(18% + 185px);
+          position: absolute;
+          border-radius: 5px;
+        margin-top: 500px;} /* Blue */
+      
+        .button1:hover{
+          background-color: rgb(139, 169, 93);
+        }
+      
+        .button2:hover{
+          background-color: rgb(139, 169, 93);
+        
+        }
+      
+        .button1:hover, .button1:active {color: black;}
+        .button2:hover, .button2:active {color: rgb(0, 0, 0);}
+    
+       
+  }

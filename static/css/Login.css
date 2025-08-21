@@ -1,0 +1,224 @@
+body {
+  background: rgb(239, 239, 239);
+    margin: 0; /* Ensure there is no margin on the body */
+    height: 100vh; /* Set body to full viewport height */
+    
+    overflow: hidden;
+}
+
+.topnav {
+  background-color: rgb(0, 0, 0);
+  top: 0;
+  left: 0;
+  position: absolute;
+  width:100%;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  border-top: 2px solid rgb(0, 0, 0);
+  justify-content: center;
+  overflow: hidden;
+  
+  }
+  
+  .topnav h2 {
+  float: left;
+  margin-left: 125px;
+  font-family: Arial;
+  color: white;
+  }
+  
+  .topnav input[type=text] {
+  
+    background-color: white;
+    
+    border: none;
+    background-image: url('searchicon.png');
+    margin-left: 1570px;
+    margin-top: 20px;
+    font-size: 12px;
+    align-items: center;
+    position: absolute;
+    height: 30px;
+    width: 260px;
+    display: flex;
+    font-size: 12px;
+    box-shadow: 1px 1 10px rgba(1, 0, 0, 0.1);
+    
+    transition: all 0.3s ease;
+}
+
+
+ 
+    .log h1 {
+        margin-top: 10px;
+        font-size: 30px;
+        margin-left: -40px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        position: fixed;
+    }
+
+    .log a {
+        color: rgb(189, 236, 120);
+        text-decoration: none;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+
+  .logform form {
+    background-color: white;
+     width: 400px;
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* Centering content within the form */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+ 
+   
+  }
+
+    form label{
+        display: flex;
+        
+    }
+
+    form input{
+        margin-top: 10px;
+    }
+
+    form input[type="text"]
+ {
+    height: 50px;
+    width: 300px;
+    border: 2px ridge rgb(154, 153, 153);
+    
+ }
+
+
+
+    form{
+    margin-left: 38.5%;
+    position: absolute;
+    margin-top: 230px;
+    }
+
+
+
+    .Login button{
+    border: none;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    padding: 20px 130px;
+    margin-right: 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 0.5px;
+    margin-top: 20px;
+    border-radius: 20px;
+    transition: 0.7s;
+  } 
+    
+    .Login :hover{
+      background-color: green;
+    }/* Green */
+
+       input[type=password] {
+        height: 50px;
+    width: 300px;
+    border: 2px ridge rgb(154, 153, 153);
+    
+      }
+    
+    
+      .input-group-addon i {
+        margin-left: 285px;
+        margin-top: -38px;
+        float: right;
+        cursor: pointer;
+        position: absolute;
+        font-size: large;
+        color: #000000;
+      }
+
+      .forgotpass a{
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+     
+        
+      }
+
+      .forgotpass p {
+        margin-top: 25px;
+        margin-left: 0px;
+        font-size: 15px;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+        
+      }
+
+      .signup p {
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: rgb(0, 0, 0);
+      
+        margin-top: 30px;
+      }
+
+      .signup a {
+        color: rgb(68, 212, 89);
+      }
+
+      .gmail i {
+        position:absolute;
+        margin-left: 15px;
+        margin-top: 42px;
+        width: 1.33em;
+        height: 1em;
+        background-repeat: no-repeat;
+        background-color: antiquewhite;
+        font-size: 30px;
+        background-size: 100% 100%;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 193'%3E%3Cpath fill='%234285f4' d='M58.182 192.05V93.14L27.507 65.077L0 49.504v125.091c0 9.658 7.825 17.455 17.455 17.455z'/%3E%3Cpath fill='%2334a853' d='M197.818 192.05h40.727c9.659 0 17.455-7.826 17.455-17.455V49.505l-31.156 17.837l-27.026 25.798z'/%3E%3Cpath fill='%23ea4335' d='m58.182 93.14l-4.174-38.647l4.174-36.989L128 69.868l69.818-52.364l4.669 34.992l-4.669 40.644L128 145.504z'/%3E%3Cpath fill='%23fbbc04' d='M197.818 17.504V93.14L256 49.504V26.231c0-21.585-24.64-33.89-41.89-20.945z'/%3E%3Cpath fill='%23c5221f' d='m0 49.504l26.759 20.07L58.182 93.14V17.504L41.89 5.286C24.61-7.66 0 4.646 0 26.23z'/%3E%3C/svg%3E");
+      }
+
+      .Login {
+        display: flex;
+      }
+      
+      @media screen and (max-width: 768px) {
+        .topnav input[type=text] {
+            margin-left: 15px; /* Adjust this value as needed */
+            margin-top: 20px; /* Adjust this value as needed */
+        }
+  
+        .topnav i {
+            margin-left: 275px; /* Adjust this value as needed */
+            margin-top: 13px;
+            
+        }
+    }
+  
+    @media screen and (min-width: 2000px){
+      .topnav input[type=text] {
+        margin-left: 83%; /* Adjust this value as needed */
+        margin-top: 20px; /* Adjust this value as needed */
+    }
+  
+      .topnav i {
+        margin-left: calc(85% + 200px); /* Adjust this value as needed */
+        margin-top: 14px;
+        
+    }
+
+    
+    .log h1 {
+      margin-left: 51.8%;
+  }
+
+  form{
+    margin-left: 50.5%;
+    }
+
+    }
+  
